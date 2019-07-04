@@ -140,7 +140,7 @@ Return the resulting output array.
 const fizzbuzz = arr => {
   // let output = [];
   arr.forEach((v, i, a) => {
-    a[i] = `${(!(v % 3) ? 'Fizz' : '') + (!(v % 5) ? 'Buzz' : '') || v}`;
+    a[i] = `${(!(v % 3) ? 'Fizz ' : '') + (!(v % 5) ? 'Buzz' : '')}` || v;
   });
   return arr;
 };
