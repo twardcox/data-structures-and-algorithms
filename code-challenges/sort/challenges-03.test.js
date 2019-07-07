@@ -167,6 +167,7 @@ DO NOT CHANGE any of the below code.
 Run your tests from the console: jest challenges-03.test.js
 ------------------------------------------------------------------------------------------------ */
 
+clear
 describe('Testing challenge 1', () => {
   test('It should sort high-to-low the numbers in an array', () => {
     const nums = [3, 4, 5, 6, 7];
@@ -178,6 +179,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
+clear
 describe('Testing challenge 2', () => {
   test('It should sort strings alphabetically', () => {
     expect(alphabetize(['alphabet', 'Zebra', 'Alphabet', 'carrot'])).toStrictEqual(['Alphabet', 'Zebra', 'alphabet', 'carrot']);
@@ -186,6 +188,7 @@ describe('Testing challenge 2', () => {
   });
 });
 
+clear
 describe('Testing challenge 3', () => {
   test('It should sort strings by length', () => {
     const ans = sortByLength(['alphabet', 'Zebra', 'Alphabet', 'carrot']);
@@ -197,6 +200,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
+clear
 describe('Testing challenge 4', () => {
   test('It should alphabetize without regard to capitalization', () => {
     expect(alphabetizeBetter(['Alice', 'apple', 'alert', 'Average'])).toStrictEqual(['alert', 'Alice', 'apple', 'Average']);
@@ -206,6 +210,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
+clear
 describe('Testing challenge 5', () => {
   test('It should sort items by their price', () => {
     expect(sortByPrice([{ name: 'Sweatshirt', price: 45 }, { name: 'Bookmark', price: 2.5 }, { name: 'Tote bag', price: 15 }])).toStrictEqual([{ name: 'Bookmark', price: 2.5 }, { name: 'Tote bag', price: 15 }, { name: 'Sweatshirt', price: 45 }]);
@@ -214,6 +219,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
+clear
 describe('Testing challenge 6', () => {
   test('It should sort numbers by their length', () => {
     expect(sortNumbersByLength([10, 2.8, 1, -47.75])).toStrictEqual([1, 10, 2.8, -47.75]);
@@ -222,6 +228,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
+clear
 describe('Testing challenge 7', () => {
   test('It should sort people by their last names', () => {
     expect(sortPeople(people)).toStrictEqual([new Person('Casey', 'Codefellow', 38), new Person('Stan', 'Seattle', 67), new Person('Wes', 'Washington', 25)]);
@@ -229,6 +236,7 @@ describe('Testing challenge 7', () => {
   });
 });
 
+clear
 describe('Testing challenge 8', () => {
   test('It should sort people with more strict ordering', () => {
     const family = [new Person('Casey', 'Codefellows', 55), new Person('Casey', 'Codefellows', 37), new Person('Charlie', 'Codefellows', 21), new Person('Charles', 'Codefellows', 29), new Person('Carol', 'Codefellow', 88)];
@@ -237,6 +245,7 @@ describe('Testing challenge 8', () => {
   });
 });
 
+clear
 describe('Testing challenge 9', () => {
   test('It should sort meetings by the day on which they happen', () => {
     const sortedMeetings = sortMeetingsByDay(meetings);
