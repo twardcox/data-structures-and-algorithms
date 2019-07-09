@@ -129,21 +129,23 @@ Iterate over the array using forEach to determine the output based on several ru
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
-// const fizzbuzz = arr => {
-//   let output = [];
-//   arr.forEach(v => {
-//     !(v % 3) ? (!(v % 5 )? output.push('Fizz Buzz') : output.push('Fizz')) : !(v % 5) ? output.push('Buzz') : output.push(v);
-//   });
-//   return output;
-// };
-
 const fizzbuzz = arr => {
-  // let output = [];
-  arr.forEach((v, i, a) => {
-    a[i] = `${(!(v % 3) ? 'Fizz ' : '') + (!(v % 5) ? 'Buzz' : '')}` || v;
+
+  let output = [];
+  arr.forEach(v => {
+    !(v % 3) ? (!(v % 5) ? output.push('Fizz Buzz') : output.push('Fizz')) : !(v % 5) ? output.push('Buzz') : output.push(v);
+
   });
-  return arr;
+  return output;
 };
+
+// const fizzbuzz = arr => {
+//   // let output = [];
+//   arr.forEach((v, i, a) => {
+//     a[i] = `${(!(v % 3) ? 'Fizz' : '') + (!(v % 5) ? 'Buzz' : '') || v}`;
+//   });
+//   return arr;
+// };
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
