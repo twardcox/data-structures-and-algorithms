@@ -130,11 +130,9 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = arr => {
-
   let output = [];
   arr.forEach(v => {
     !(v % 3) ? (!(v % 5) ? output.push('Fizz Buzz') : output.push('Fizz')) : !(v % 5) ? output.push('Buzz') : output.push(v);
-
   });
   return output;
 };
