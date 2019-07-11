@@ -7,8 +7,7 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 ------------------------------------------------------------------------------------------------ */
 
 const evenOddNumericValues = arr => {
-  // let newArr =
-  console.log(arr.filter(v => Number.isNaN(v)));
+  return arr.filter(v => Number.isInteger(v)).map(v => (v % 2 ? 'odd' : 'even'));
 };
 
 console.log(evenOddNumericValues(['Gregor', 2, 4, 1]));
