@@ -24,9 +24,9 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = arr => {
-  arr.forEach(v => 2 ** v);
-
-  return arr;
+  let newArr = [];
+  arr.forEach(v => newArr.push(2 ** v));
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------

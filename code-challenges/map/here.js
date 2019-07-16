@@ -1,54 +1,17 @@
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 7
+CHALLENGE 2
 
-Use the snorlaxStats data, below, for this challenge.
-
-Write a function named extractStats that, given an array of stats, uses map to return an array of objects containing the stat name and the total.
-
-The total should be the sum of the effort and the baseStat.
-
-Here is an example of a single array element: { name: 'speed', total: 35 }
+Write a function named forEachTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 1, but uses forEach instead of a for loop.
 ------------------------------------------------------------------------------------------------ */
 
-const snorlaxStats = {
-  stats: [
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/6/',
-        name: 'speed'
-      },
-      effort: 5,
-      baseStat: 30
-    },
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/5/',
-        name: 'special-defense'
-      },
-      effort: 2,
-      baseStat: 110
-    },
-    {
-      stat: {
-        url: 'https://pokeapi.co/api/v2/stat/4/',
-        name: 'special-attack'
-      },
-      effort: 9,
-      baseStat: 65
-    }
-  ],
-  name: 'snorlax',
-  weight: 4600
+const forEachTwoToThe = arr => {
+  let newArr = [];
+  arr.forEach(v => newArr.push(2 ** v));
+  return newArr;
 };
 
-const extractStats = arr => {
-  return arr.map(v => {
-    return {
-      name: v.stat.name,
-      speed: v.effort + v.baseStat
-    };
-  });
-};
+console.log(forEachTwoToThe([0, 4, 5]));
+// .toStrictEqual([1, 16, 32]);
 
-console.log(extractStats(snorlaxStats.stats));
-// .toStrictEqual([{ name: 'speed', total: 35 }, { name: 'special-defense', total: 112 }, { name: 'special-attack', total: 74 }]);
+console.log(forEachTwoToThe([-1, -2, -3]));
+// .toStrictEqual([0.5, 0.25, 0.125]);
