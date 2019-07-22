@@ -93,7 +93,6 @@ let starWarsData = [
 ];
 
 let biggerThanLuke = arr => {
-  let target = 'Luke Skywalker';
   let lowMass = '';
   arr.forEach(v => (Number(v.mass) > Number(arr[0].mass) ? (lowMass += v.name + ' - ') : ''));
   return lowMass.slice(0, -3);
@@ -168,7 +167,7 @@ Run your tests from the console: jest challenge-14.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should convert each word to title case', () => {
     const words = ['apple', 'banana', 'MacGyver'];
     expect(toTitleCase(words)).toStrictEqual(['Apple', 'Banana', 'MacGyver']);
@@ -177,14 +176,14 @@ xdescribe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return only characters that are bigger than Luke', () => {
     expect(biggerThanLuke(starWarsData)).toStrictEqual('Darth Vader - Pex Kylar');
     expect(biggerThanLuke([])).toStrictEqual('');
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should sort items by a price', () => {
     expect(sortBy('price', [{ name: 'Sweatshirt', price: 45 }, { name: 'Bookmark', price: 2.5 }, { name: 'Tote bag', price: 15 }])).toStrictEqual([{ name: 'Bookmark', price: 2.5 }, { name: 'Tote bag', price: 15 }, { name: 'Sweatshirt', price: 45 }]);
   });
@@ -194,7 +193,7 @@ xdescribe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should check if url is https', () => {
     expect(isSecure('http://www.insecure.com')).toBe(false);
     expect(isSecure('https://secure.com')).toBe(true);
@@ -202,7 +201,7 @@ xdescribe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return true if there are three in a row', () => {
     expect(detectTicTacToeWin([['X', '', 'O'], ['X', 'O', ''], ['X', 'O', 'X']])).toStrictEqual(true);
     expect(detectTicTacToeWin([['O', '', 'X'], ['X', 'O', 'X'], ['X', '', 'O']])).toStrictEqual(true);
